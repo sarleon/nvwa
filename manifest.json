@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "nvwa",
+  "version": "0.0.1",
+
+  "permissions": ["tabs"],
+  "icons":{
+    "19":"res/img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "res/img/icon.png"
+
+    },
+    "default_popup": "popup.html",
+    "default_title": "nvwa"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["remove_space.js"]
+    }
+  ]
+}
